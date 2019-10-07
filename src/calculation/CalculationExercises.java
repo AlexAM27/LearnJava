@@ -5,12 +5,56 @@ import java.util.Scanner;
 public class CalculationExercises {
 
     public static void main(String[] args) {
-        exercise20();
+        bank();
     }
 
-    // find square, perimeter and hypothenuse
-    private static void exercise21(double c1, double c2) {
+    private static void bank() {
+        Scanner scan = new Scanner(System.in);
+        double sum = scan.nextDouble();
+        double proz = scan.nextDouble();
+        for (int i = 0; i < 5; i++) {
+            sum = sum + sum * proz/100;
+        }
+        System.out.println(sum);
+    }
 
+    private static void change2(int a, int b, int c) {
+        int temp_a = a;
+        int temp_b = b;
+        a = a + b;
+        b = c - temp_a;
+        c = temp_a + temp_b + c;
+        System.out.println("a = " + a +"\nb = " + b + "\nc = " + c);
+
+    }
+
+    private static void change(int a, int b) {
+        int t = a;
+        a = b;
+        b = t;
+        System.out.println(a + " und " + b);
+    }
+
+    private static void exercise24(int day, int rabatt, double depo) {
+        double sum = depo + day * 3;
+        sum = sum + sum * rabatt / 100;
+        System.out.println(sum);
+    }
+
+    //Celcius in Fahrenheit
+    private static void exercise22(double grad) {
+        double temp = 9.0 * grad / 5.0 + 32;
+        System.out.println(temp);
+    }
+
+    // find square, perimeter and hypothenuse of right-angle triangle
+    private static void exercise21(double c1, double c2) {
+        double square = (c1 * c2) / 2;
+        System.out.println(square);
+        double hyp = Math.sqrt(c1 * c1 + c2 * c2);
+        System.out.println(hyp);
+        double per = c1 + c2 + hyp;
+        System.out.println(per);
     }
 
     private static void exercise20() {
