@@ -5,7 +5,46 @@ import java.util.Scanner;
 public class CalculationExercises {
 
     public static void main(String[] args) {
-        bank();
+        System.out.println(237 % 200);
+    }
+
+    private static void exercise32(int number) {
+        int firstDigit = getFirstDigit(number);
+
+    }
+
+    private static int getFirstDigit(int num) {
+        if (num / 10 == 0) {
+            return Math.abs(num);
+        } else {
+            return getFirstDigit(num / 10);
+        }
+    }
+
+    private static void exercise31(int side, int height, int weight) {
+        int a = height / side;
+        int b = weight / side;
+        System.out.println(a*b);
+    }
+
+    private static void exercise30(int a) {
+        int y = a;
+        a = a * a;
+        a = a * a;
+        a = a  * a  * a * a / y;
+        System.out.println(Math.pow(2, 15));
+        System.out.println(a);
+    }
+
+    private static void change3() {
+        int a = 2;
+        int b = 5;
+
+        a = a + b;
+        b = b - a;
+        b = -b;
+        a = a - b;
+        System.out.println("a = " + a + " b = " + b);
     }
 
     private static void bank() {
