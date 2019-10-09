@@ -5,20 +5,19 @@ import java.util.Scanner;
 public class CalculationExercises {
 
     public static void main(String[] args) {
-        System.out.println(237 % 200);
+        exercise32(237);
     }
 
     private static void exercise32(int number) {
-        int firstDigit = getFirstDigit(number);
-
+        int first = getIntegerDigitFromNumber(number, 0,1);
+        int rest = Integer.parseInt(String.valueOf(number).substring(1));
+        int answer = rest * 10 + first;
+        System.out.println(answer);
     }
 
-    private static int getFirstDigit(int num) {
-        if (num / 10 == 0) {
-            return Math.abs(num);
-        } else {
-            return getFirstDigit(num / 10);
-        }
+    private static int getIntegerDigitFromNumber(int number, int start ,int end) {
+        String numberAsString = String.valueOf(number);
+        return Integer.parseInt(numberAsString.substring(start, end));
     }
 
     private static void exercise31(int side, int height, int weight) {
